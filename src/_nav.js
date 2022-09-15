@@ -3,15 +3,11 @@ import CIcon from '@coreui/icons-react'
 import {
   cilBell,
   cilCalculator,
-  cilChartPie,
-  cilCursor,
-  cilDescription,
   cilDrop,
-  cilNotes,
-  cilPencil,
+  cilGraph,
   cilPuzzle,
   cilSpeedometer,
-  cilStar,
+  cilUser,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -26,53 +22,37 @@ const _nav = [
     },
   },
   {
-    component: CNavTitle,
-    name: 'Voting',
-  },
-  {
     component: CNavGroup,
-    name: 'Base',
+    name: 'Voting',
     to: '/base',
     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Accordion',
+        name: 'Masukkan Voting',
         to: '/base/accordion',
       },
       {
         component: CNavItem,
-        name: 'Breadcrumb',
+        name: 'All User',
         to: '/base/breadcrumbs',
       },
     ],
   },
   {
-    component: CNavTitle,
-    name: 'Extras',
-  },
-  {
-    component: CNavGroup,
-    name: 'Pages',
-    icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Login',
-        to: '/login',
-      },
-      {
-        component: CNavItem,
-        name: 'Register',
-        to: '/register',
-      },
-    ],
+    component: CNavItem,
+    name: 'Hasil Vote',
+    to: '/dashboard',
+    icon: <CIcon icon={cilGraph} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+    },
   },
   {
     component: CNavItem,
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    name: 'Log Out',
+    to: '/login',
+    icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
     badge: {
       color: 'info',
     },
